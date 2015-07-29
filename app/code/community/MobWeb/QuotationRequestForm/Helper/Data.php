@@ -39,12 +39,12 @@ class MobWeb_QuotationRequestForm_Helper_Data extends Mage_Core_Helper_Abstract
 			}
 
 			// Format the item data as a string
-			$cartItemData .= sprintf("%s: %s \n", Mage::helper('catalog')->__('Quantity'), $cartItem->getQty());
 			$cartItemData .= sprintf("%s: %s \n", Mage::helper('catalog')->__('SKU'), $product->getSku());
 			$cartItemData .= sprintf("%s: %s \n", Mage::helper('catalog')->__('Name'), $product->getName());
 			$cartItemData .= sprintf("%s: %s \n", Mage::helper('catalog')->__('Options'), $productOptions);
 			$cartItemData .= sprintf("%s: %s \n", Mage::helper('catalog')->__('Price'), Mage::helper('core')->currency($cartItem->getPriceInclTax(), true, false));
 			$cartItemData .= sprintf("%s: %s \n", Mage::helper('quotationrequestform')->__('Price without tax'), Mage::helper('core')->currency($cartItem->getBasePrice(), true, false));
+			$cartItemData .= sprintf("%s: %s \n", Mage::helper('catalog')->__('Quantity'), $cartItem->getQty());
 
 			$cartItems[] = $cartItemData;
 		}
