@@ -1,0 +1,20 @@
+app/code/community/MobWeb/QuotationRequestForm app/code/community/MobWeb/QuotationRequestForm/
+
+app/design/frontend/base/default/layout/mobweb_quotationrequestform.xml app/design/frontend/base/default/layout/mobweb_quotationrequestform.xml
+
+app/design/frontend/base/default/template/mobweb/quotationrequestform app/design/frontend/base/default/template/mobweb/quotationrequestform/
+
+app/locale/de_DE/mobweb_quotationrequestform.csv app/locale/de_DE/mobweb_quotationrequestform.csv
+app/locale/de_DE/mobweb_quotationrequestform.csv app/locale/de_CH/mobweb_quotationrequestform.csv
+app/locale/de_DE/mobweb_quotationrequestform.csv app/locale/de_AT/mobweb_quotationrequestform.csv
+
+app/locale/en_US/template/email/quotation_request.html app/locale/en_US/template/email/quotation_request.html
+
+app/locale/de_DE/template/email/quotation_request.html app/locale/de_DE/template/email/quotation_request.html
+app/locale/de_DE/template/email/quotation_request.html app/locale/de_CH/template/email/quotation_request.html
+app/locale/de_DE/template/email/quotation_request.html app/locale/de_AT/template/email/quotation_request.html
+
+app/etc/modules/MobWeb_QuotationRequestForm.xml app/etc/modules/MobWeb_QuotationRequestForm.xml
+
+# Clear the cache
+@shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
