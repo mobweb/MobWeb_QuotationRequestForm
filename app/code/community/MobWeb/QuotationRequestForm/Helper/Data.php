@@ -29,16 +29,12 @@ class MobWeb_QuotationRequestForm_Helper_Data extends Mage_Core_Helper_Abstract
 			// If the product is configurable, grab its options
 			$productOptions = '';
 			if($product->getData('type_id') === "configurable") {
-				$config = $product->getTypeInstance(true);
+				$orderOptions = $product->getTypeInstance(true)->getOrderOptions($product);
 
-				foreach($config->getConfigurableAttributesAsArray($product) AS $option) {
-					$productOptions .= $option['store_label'] . ': ';
-
-					foreach($option['values'] AS $optionValue) {
-						$productOptions .= $optionValue['store_label'];
+				if(isset($orderOptions['attributes_info']) && count($orderOptions['attributes_info'])) {
+					foreach($orderOptions['attributes_info'] AS $attributeInfo) {
+						$productOptions .= sprintf('%s: %s', $attributeInfo['label'],  $attributeInfo['value']);
 					}
-
-					$productOptions .= ', ';
 				}
 			}
 
